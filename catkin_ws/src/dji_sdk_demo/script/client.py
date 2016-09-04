@@ -32,8 +32,8 @@ def main():
 			if(json.loads(command)["action"] == "testCircle"):
 				drone.takeoff()
 				time.sleep(5)
-				R = int(json.loads(command)["r"])
-				V = int(json.loads(command)["v"])
+				R = float(json.loads(command)["r"]) / 15
+				V = float(json.loads(command)["v"]) / 15
 				print R
 				print V
 				for i in range(300):
